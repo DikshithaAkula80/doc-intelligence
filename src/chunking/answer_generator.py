@@ -42,4 +42,31 @@ Answer:"""
             "section": meta.get("section_heading", ""),
         })
 
-    return {"answer": answer, "citations": citations}
+    confidence = _score_confidence(query, answer, retrieved_chunks)
+
+    return {
+        "answer": answer,
+        "citations": citations,
+        "confidence": confidence,
+        "confidence_label": _confidence_label(confidence)
+    }
+
+def _score_confidence(query: str, answer: str, chunks: List[Dict]) -> float:
+    score = 0.0
+    if chunks:
+        score += 0.4
+    if answer and "could not find" not in answer.lower():
+        score += 0.3
+    query_words = set(query.lower().split())
+    answer_words = set(answer.lower().split())
+    overlap = len(query_words & answer_words) / max(len(query_words), 1)
+    score += min(0.3, overlap)
+    return round(min(1.0, score), 2)
+
+def _confidence_label(score: float) -> str:
+    if score >= 0.8:
+        return "High"
+    elif score >= 0.5:
+        return "Medium"
+    else:
+        return "Low"
