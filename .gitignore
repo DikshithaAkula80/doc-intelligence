@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+data/processed/
+data/vectorstore/
+data/raw/
+*.json
+*.png
+.env
