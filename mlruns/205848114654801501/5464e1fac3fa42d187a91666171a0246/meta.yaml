@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/dikshithaakula/doc-intelligence/mlruns/205848114654801501/5464e1fac3fa42d187a91666171a0246/artifacts
+end_time: 1779401375428
+entry_point_name: ''
+experiment_id: '205848114654801501'
+lifecycle_stage: active
+run_id: 5464e1fac3fa42d187a91666171a0246
+run_name: with_reranker_170812
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1779401292569
+status: 3
+tags: []
+user_id: dikshithaakula
