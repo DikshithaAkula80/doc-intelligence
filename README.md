@@ -10,3 +10,17 @@ Built as a portfolio project targeting senior ML/AI Engineer roles.
 
 ## Architecture
 
+
+## Screenshots
+
+### Demo — Answer with Confidence Score
+![UI Demo](screenshots/ui-demo.png)
+
+### Demo — Confidence Score
+![Confidence Demo](screenshots/confidence-demo.png)
+
+### Evaluation Dashboard
+![Eval Dashboard](screenshots/eval-dashboard.png)
+
+### GitHub Repository
+![Repo Structure](screenshots/repo-structure.png)
